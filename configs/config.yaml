@@ -1,0 +1,41 @@
+dataset:
+  dti_raw_dir: "data/raw/DTI/"
+  nifti_ad_dir: "data/nifti/AD/"
+  nifti_cn_dir: "data/nifti/CN/"
+  clinical_csv: "data/clinical/adni_clinical.csv"
+  networks_dir: "data/processed/networks/"
+  node_features_dir: "data/processed/node_features/"
+  splits_dir: "data/splits/"
+  num_subjects: 91
+  num_classes: 3
+  train_ratio: 0.80
+  test_ratio: 0.20
+
+model:
+  num_nodes: 90
+  node_feature_dim: 90
+  gcn_layer1_out: 64
+  gcn_layer2_out: 32
+  gcn_layer3_out: 16
+  pooling_ratio_k: 0.8
+  dti_embedding_dim: 32
+  clinical_input_dim: 2
+  clinical_hidden_dim: 32
+  clinical_embedding_dim: 16
+  fused_dim: 48
+  classifier_hidden: 32
+  num_classes: 3
+  dropout: 0.3
+
+training:
+  epochs: 200
+  learning_rate: 0.0005
+  weight_decay: 0.0005
+  optimizer: "Adam"
+  early_stopping_patience: 30
+  seed: 42
+
+paths:
+  checkpoint_dir: "results/checkpoints/"
+  log_dir: "results/logs/"
+  plot_dir: "results/plots/"
