@@ -1,6 +1,11 @@
 __pycache__/
 *.pt
 *.pth
-*.npy
 data/
 results/
+
+# junk / temp files
+*.tar.gz
+*.sh
+.ipynb_checkpoints/
+*.swp
